@@ -130,14 +130,6 @@ export const BestBetsTable: React.FC<BestBetsTableProps> = ({
               textAlign: 'left',
               fontSize: '1rem',
               borderBottom: '3px solid #e5e7eb'
-            }}>URLs</th>
-            <th style={{
-              fontWeight: '700',
-              color: '#111827',
-              padding: '16px 24px',
-              textAlign: 'left',
-              fontSize: '1rem',
-              borderBottom: '3px solid #e5e7eb'
             }}>Status</th>
             <th style={{
               fontWeight: '700',
@@ -210,20 +202,6 @@ export const BestBetsTable: React.FC<BestBetsTableProps> = ({
                       +{(collection.keywords || []).length - 3} more
                     </span>
                   )}
-                </div>
-              </td>
-              <td style={{ padding: '16px 24px' }}>
-                <div style={{
-                  fontSize: '0.875rem',
-                  color: '#6b7280',
-                  backgroundColor: '#f3f4f6',
-                  padding: '6px 16px',
-                  borderRadius: '16px',
-                  display: 'inline-block',
-                  fontWeight: '600',
-                  border: '2px solid #d1d5db'
-                }}>
-                  {(collection.urls || []).length} URL{(collection.urls || []).length !== 1 ? 's' : ''}
                 </div>
               </td>
               <td style={{ padding: '16px 24px' }}>

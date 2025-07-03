@@ -13,7 +13,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, o
   const [credentials, setCredentials] = useState<GraphCredentials>({
     accessKey: '',
     secretKey: '',
-    endpoint: 'https://prod.cg.optimizely.com'
+    endpoint: 'https://cg.optimizely.com'
   });
 
   const [isTestingConnection, setIsTestingConnection] = useState(false);

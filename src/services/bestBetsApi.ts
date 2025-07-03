@@ -19,7 +19,7 @@ export interface BestBetsResponse {
 
 export class BestBetsApiService {
   private auth: HMACAuth;
-  private baseUrl = 'https://prod.cg.optimizely.com/api/bestbets';
+  private baseUrl = 'https://cg.optimizely.com/api/bestbets';
 
   constructor(credentials: GraphCredentials) {
     this.auth = new HMACAuth({
