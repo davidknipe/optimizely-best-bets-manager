@@ -1,4 +1,4 @@
-# Optimizely Best Bets Manager
+# Optimizely Pinned Results Manager
 
 ## Project Overview
 This is a React-based web application for managing "pinned results" (best bets) in Optimizely Graph. The application allows users to create collections of pinned search results and manage the individual items within those collections.

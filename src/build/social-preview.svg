@@ -14,7 +14,7 @@
   <path d="M150 50 L150 90 M130 70 L170 70" stroke="white" stroke-width="2" stroke-linecap="round"/>
   
   <!-- Title Text -->
-  <text x="200" y="65" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Optimizely Best Bets Manager</text>
+  <text x="200" y="65" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Optimizely Pinned Results Manager</text>
   <text x="200" y="95" fill="white" font-family="Arial, sans-serif" font-size="18" opacity="0.9">Manage pinned search results for Optimizely Graph</text>
   
   <!-- Collections Panel Mock -->

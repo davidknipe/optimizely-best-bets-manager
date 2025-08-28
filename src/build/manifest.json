@@ -1,6 +1,6 @@
 {
-  "short_name": "Best Bets Manager",
-  "name": "Optimizely Best Bets Manager",
+  "short_name": "Pinned Results Manager",
+  "name": "Optimizely Pinned Results Manager",
   "description": "Manage pinned search results for Optimizely Graph",
   "icons": [
     {
