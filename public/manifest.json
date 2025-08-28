@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Best Bets Manager",
+  "name": "Optimizely Best Bets Manager",
+  "description": "Manage pinned search results for Optimizely Graph",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "categories": ["business", "productivity", "utilities"]
 }
