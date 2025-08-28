@@ -1,5 +1,0 @@
-[build]
-command = "npm run build"
-destination = "build"
-
-[build.environment_variables]
