@@ -1057,14 +1057,14 @@ export default function PinnedResultsManager() {
     if (client) {
       loadCollections();
     }
-  }, [client]);
+  }, [client, loadCollections]);
 
   // Load items when collection is selected
   useEffect(() => {
     if (client && selectedCollection) {
       loadItems();
     }
-  }, [client, selectedCollection]);
+  }, [client, selectedCollection, loadItems]);
 
   const loadCollections = async () => {
     if (!client) return;
