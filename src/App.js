@@ -817,7 +817,24 @@ const ItemModal = ({ isOpen, onClose, item, onSave, credentials }) => {
         isActive: true
       });
     }
+    // Always reset the current phrase input when the modal opens/changes mode
+    setCurrentPhrase('');
   }, [item]);
+
+  // Reset form when modal opens for new item
+  useEffect(() => {
+    if (isOpen && !item) {
+      // Ensure clean state for new items
+      setFormData({
+        phrases: [],
+        targetKey: '',
+        language: 'en',
+        priority: 1,
+        isActive: true
+      });
+      setCurrentPhrase('');
+    }
+  }, [isOpen, item]);
 
   const handleSave = () => {
     if (formData.targetKey && formData.phrases.length > 0) {
