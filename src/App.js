@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Settings, Plus, Edit3, Trash2, Search, X, AlertCircle } from 'lucide-react';
 
 // Embedded styles
@@ -1052,21 +1052,7 @@ export default function PinnedResultsManager() {
     }
   }, [credentials]);
 
-  // Load collections when client is ready
-  useEffect(() => {
-    if (client) {
-      loadCollections();
-    }
-  }, [client, loadCollections]);
-
-  // Load items when collection is selected
-  useEffect(() => {
-    if (client && selectedCollection) {
-      loadItems();
-    }
-  }, [client, selectedCollection, loadItems]);
-
-  const loadCollections = async () => {
+  const loadCollections = useCallback(async () => {
     if (!client) return;
     setLoading(true);
     try {
@@ -1078,9 +1064,9 @@ export default function PinnedResultsManager() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [client]);
 
-  const loadItems = async () => {
+  const loadItems = useCallback(async () => {
     if (!client || !selectedCollection) return;
     setLoading(true);
     try {
@@ -1097,7 +1083,21 @@ export default function PinnedResultsManager() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [client, selectedCollection]);
+
+  // Load collections when client is ready
+  useEffect(() => {
+    if (client) {
+      loadCollections();
+    }
+  }, [client, loadCollections]);
+
+  // Load items when collection is selected
+  useEffect(() => {
+    if (client && selectedCollection) {
+      loadItems();
+    }
+  }, [client, selectedCollection, loadItems]);
 
   const handleSaveCredentials = (creds) => {
     setCredentials(creds);
